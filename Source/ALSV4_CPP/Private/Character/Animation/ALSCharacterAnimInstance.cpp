@@ -735,7 +735,7 @@ float UALSCharacterAnimInstance::CalculateStrideBlend() const
 	const float LerpedStrideBlend =
 		FMath::Lerp(StrideBlend_N_Walk->GetFloatValue(CurveTime), StrideBlend_N_Run->GetFloatValue(CurveTime),
 		            ClampedGait);
-	return FMath::Lerp(LerpedStrideBlend, StrideBlend_C_Walk->GetFloatValue(CharacterInformation.Speed),
+	return FMath::Lerp(LerpedStrideBlend, StrideBlend_C_Walk->GetFloatValue(CurveTime),
 	                   GetCurveValue(NAME_BasePose_CLF));
 }
 
